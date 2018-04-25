@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage BackgroundColor="#232323" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:ColorGame" x:Class="ColorGame.ColorGamePage">
+    
+    <StackLayout Margin="0, 60, 0, 0">
+        <Label Text="The Color Game" HorizontalOptions="Center" TextColor="White" Margin="0, 0, 0, 30" FontSize="40"></Label>
+        <Label Text="What Color is " HorizontalOptions="Center" FontSize="28" TextColor="White"></Label>
+        <Label x:Name="guessColorLabel" HorizontalOptions="Center" FontSize="28" TextColor="White"></Label>
+        <Button Text="Play Again" Clicked="Handle_Clicked"></Button>
+        <Label Text="Try Again" x:Name="tryAgainLabel" HorizontalOptions="Center" TextColor="White" IsVisible="false"></Label>
+        <Label Text="Correct! Good Job!" x:Name="correctLabel" HorizontalOptions="Center" TextColor="White" IsVisible="false"></Label>
+        <StackLayout >
+            
+            <BoxView WidthRequest="50" HeightRequest="75" x:Name="boxview0">
+                <BoxView.GestureRecognizers>
+                   <TapGestureRecognizer Tapped="OnBoxViewTapped" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            
+            <BoxView WidthRequest="50" HeightRequest="75" x:Name="boxview1">
+                <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnBoxViewTapped" />                
+            </BoxView.GestureRecognizers>
+            </BoxView>
+            
+            <BoxView WidthRequest="50" HeightRequest="75" x:Name="boxview2">
+                <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnBoxViewTapped" />                
+            </BoxView.GestureRecognizers>
+            </BoxView>
+
+            <BoxView WidthRequest="50" HeightRequest="75" x:Name="boxview3">
+                <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnBoxViewTapped" />                
+            </BoxView.GestureRecognizers>
+            </BoxView>
+            
+
+            
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
